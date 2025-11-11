@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if not exist lib mkdir lib)",
+      "Bash(mkdir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -6,22 +6,38 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PractiSight - Monitor Your Practice's Online Reputation in Real-Time",
-  description: "AI-powered review monitoring and insights for dental practices. Track reviews across Google and Yelp, get actionable recommendations powered by GPT-4, and see how you stack up against competitors.",
-  keywords: ["dental practice", "review monitoring", "online reputation", "AI insights", "dental reviews", "practice management"],
+  description:
+    "AI-powered review monitoring and insights for dental practices. Track reviews across Google and Yelp, get actionable recommendations powered by GPT-4, and see how you stack up against competitors.",
+  keywords: [
+    "dental practice",
+    "review monitoring",
+    "online reputation",
+    "AI insights",
+    "dental reviews",
+    "practice management",
+  ],
   authors: [{ name: "PractiSight" }],
   openGraph: {
-    title: "PractiSight - Monitor Your Practice's Online Reputation in Real-Time",
-    description: "AI-powered review monitoring and insights for dental practices",
+    title:
+      "PractiSight - Monitor Your Practice's Online Reputation in Real-Time",
+    description:
+      "AI-powered review monitoring and insights for dental practices",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PractiSight - Monitor Your Practice's Online Reputation in Real-Time",
-    description: "AI-powered review monitoring and insights for dental practices",
+    title:
+      "PractiSight - Monitor Your Practice's Online Reputation in Real-Time",
+    description:
+      "AI-powered review monitoring and insights for dental practices",
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#4F46E5",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#2563EB",
 };
 
 export default function RootLayout({
