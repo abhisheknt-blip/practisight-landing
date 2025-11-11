@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "practice management",
   ],
   authors: [{ name: "PractiSight" }],
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title:
       "PractiSight - Monitor Your Practice's Online Reputation in Real-Time",
