@@ -45,7 +45,7 @@ export default function CookieConsent() {
           <p className="font-semibold mb-2">We use cookies</p>
           <p className="text-gray-300">
             We use cookies to analyze our traffic and improve your experience.
-            By clicking "Accept", you consent to our use of cookies and analytics tracking.
+            By clicking &apos;Accept&apos;, you consent to our use of cookies and analytics tracking.
             See our{' '}
             <a href="/privacy" className="underline hover:text-blue-400 transition-colors">
               Privacy Policy
