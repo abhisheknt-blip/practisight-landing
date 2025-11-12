@@ -89,6 +89,28 @@ export default function Home() {
               </a>
             </div>
 
+            {/* Trust Signals */}
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center">
+                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>14-day free trial</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Cancel anytime</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Setup in 5 minutes</span>
+              </div>
+            </div>
+
             {/* Hero Visual Element */}
             <div className="mt-16 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-3xl opacity-20"></div>
@@ -160,7 +182,7 @@ export default function Home() {
                 Real-Time Monitoring
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Track reviews across Google and Yelp as they come in. Get
+                Track Google reviews in real-time as they come in. Get
                 instant notifications when new reviews are posted so you can
                 respond quickly.
               </p>
@@ -465,6 +487,103 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about PractiSight
+            </p>
+          </div>
+
+          {/* FAQ Accordion */}
+          <div className="space-y-4">
+            {/* Question 1 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200">
+              <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+                How long does setup take?
+                <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600">
+                Setup takes less than 5 minutes. Just sign up, add your Google Business Profile location, and we&apos;ll start monitoring reviews immediately. No technical knowledge required, no software to install.
+              </div>
+            </details>
+
+            {/* Question 2 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200">
+              <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+                Do I need to install anything?
+                <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600">
+                No installation needed. PractiSight is a cloud-based service - just log in from any device with your web browser. Access your dashboard from your computer, tablet, or phone.
+              </div>
+            </details>
+
+            {/* Question 3 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200">
+              <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+                Can I cancel anytime?
+                <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600">
+                Yes, you can cancel your subscription at any time with no cancellation fees. You&apos;ll retain access until the end of your current billing period. No questions asked, no hassle.
+              </div>
+            </details>
+
+            {/* Question 4 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200">
+              <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+                Do you offer discounts for multiple locations?
+                <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600">
+                Our Professional plan ($179/month) includes up to 10 locations at a great value - that&apos;s less than $18 per location. For practices with more than 10 locations, contact us at support@practisight.com for custom enterprise pricing.
+              </div>
+            </details>
+
+            {/* Question 5 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200">
+              <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+                Is my practice data secure?
+                <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600">
+                Absolutely. We use bank-level 256-bit encryption, secure cloud infrastructure, and never share your data with third parties. All data is stored and handled in compliance with HIPAA best practices. Your patients&apos; privacy is our priority.
+              </div>
+            </details>
+          </div>
+
+          {/* CTA after FAQ */}
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-6">Still have questions?</p>
+            <a
+              href="https://app.practisight.com/support"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Contact Support
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Email Signup / Waitlist Section */}
       <section
         id="waitlist"
@@ -515,14 +634,14 @@ export default function Home() {
             <div className="mb-6 md:mb-0">
               <Logo size="sm" variant="dark" />
               <p className="text-sm text-gray-400 mt-2">
-                &copy; 2025 PractiSight. All rights reserved.
+                &copy; 2025 PractiSight LLC. All rights reserved.
               </p>
             </div>
             <div className="flex space-x-8">
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="/terms" className="hover:text-white transition-colors">
                 Terms of Service
               </a>
               <a

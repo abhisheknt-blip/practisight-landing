@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "PractiSight - Monitor Your Practice's Online Reputation in Real-Time",
   description:
-    "AI-powered review monitoring and insights for dental practices. Track reviews across Google and Yelp, get actionable recommendations powered by GPT-4, and see how you stack up against competitors.",
+    "AI-powered review monitoring and insights for dental practices. Track Google reviews in real-time, get actionable recommendations powered by GPT-4, and see how you stack up against competitors.",
   keywords: [
     "dental practice",
     "review monitoring",
