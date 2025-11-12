@@ -3,7 +3,8 @@
     "allow": [
       "Bash(if not exist lib mkdir lib)",
       "Bash(mkdir:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []
