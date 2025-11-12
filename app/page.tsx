@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Logo } from "@/components/logo";
+import { supabase } from "./lib/supabase";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -11,19 +12,39 @@ export default function Home() {
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage("");
 
-    // For now, just console.log the email
-    console.log("Waitlist signup:", email);
+    try {
+      const { data, error } = await supabase
+        .from("newsletter_signups")
+        .insert([{ email, source: "landing_page" }]);
 
-    // Simulate API call
-    setTimeout(() => {
-      setSubmitMessage("Thank you! You've been added to the waitlist.");
-      setEmail("");
+      if (error) {
+        if (error.code === "23505") {
+          // Duplicate email
+          setSubmitMessage("You're already subscribed! Thank you.");
+        } else {
+          throw error;
+        }
+      } else {
+        setSubmitMessage("Thanks for subscribing! Check your inbox.");
+        setEmail("");
+
+        // Track newsletter signup in Google Analytics
+        if (typeof window !== "undefined" && (window as any).gtag) {
+          (window as any).gtag("event", "newsletter_signup", {
+            event_category: "engagement",
+            event_label: "newsletter_form",
+            value: 1,
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Newsletter signup error:", error);
+      setSubmitMessage("Something went wrong. Please try again.");
+    } finally {
       setIsSubmitting(false);
-
-      // Clear message after 5 seconds
-      setTimeout(() => setSubmitMessage(""), 5000);
-    }, 500);
+    }
   };
 
   return (
@@ -651,8 +672,20 @@ export default function Home() {
               </button>
             </div>
             {submitMessage && (
-              <div className="mt-4 p-4 bg-white/20 backdrop-blur-sm rounded-lg">
-                <p className="text-white font-medium">{submitMessage}</p>
+              <div
+                className={`mt-4 p-4 rounded-lg ${
+                  submitMessage.includes("wrong")
+                    ? "bg-red-500/20 backdrop-blur-sm"
+                    : "bg-white/20 backdrop-blur-sm"
+                }`}
+              >
+                <p
+                  className={`font-medium ${
+                    submitMessage.includes("wrong") ? "text-red-100" : "text-white"
+                  }`}
+                >
+                  {submitMessage}
+                </p>
               </div>
             )}
           </form>

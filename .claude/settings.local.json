@@ -4,7 +4,8 @@
       "Bash(if not exist lib mkdir lib)",
       "Bash(mkdir:*)",
       "Bash(npm run build:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []
