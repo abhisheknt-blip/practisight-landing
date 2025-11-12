@@ -43,6 +43,15 @@ export default function Home() {
               <a
                 href="https://app.practisight.com/signup"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag) {
+                    (window as any).gtag('event', 'start_trial_click', {
+                      event_category: 'engagement',
+                      event_label: 'header_navigation',
+                      value: 1
+                    });
+                  }
+                }}
               >
                 Start Free Trial
               </a>
@@ -67,6 +76,15 @@ export default function Home() {
               <a
                 href="https://app.practisight.com/signup"
                 className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag) {
+                    (window as any).gtag('event', 'start_trial_click', {
+                      event_category: 'engagement',
+                      event_label: 'hero_primary_cta',
+                      value: 1
+                    });
+                  }
+                }}
               >
                 Start Free Trial
                 <svg
@@ -346,6 +364,15 @@ export default function Home() {
               <a
                 href="https://app.practisight.com/signup"
                 className="block w-full py-3 px-6 text-center rounded-lg font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 transition-colors"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag) {
+                    (window as any).gtag('event', 'start_trial_click', {
+                      event_category: 'engagement',
+                      event_label: 'pricing_starter_plan',
+                      value: 1
+                    });
+                  }
+                }}
               >
                 Get Started
               </a>
@@ -479,6 +506,15 @@ export default function Home() {
               <a
                 href="https://app.practisight.com/signup"
                 className="block w-full py-3 px-6 text-center rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag) {
+                    (window as any).gtag('event', 'start_trial_click', {
+                      event_category: 'engagement',
+                      event_label: 'pricing_professional_plan',
+                      value: 1
+                    });
+                  }
+                }}
               >
                 Get Started
               </a>
