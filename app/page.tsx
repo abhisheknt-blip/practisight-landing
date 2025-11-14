@@ -21,7 +21,6 @@ export default function Home() {
 
       if (error) {
         if (error.code === "23505") {
-          // Duplicate email
           setSubmitMessage("You're already subscribed! Thank you.");
         } else {
           throw error;
@@ -30,7 +29,6 @@ export default function Home() {
         setSubmitMessage("Thanks for subscribing! Check your inbox.");
         setEmail("");
 
-        // Track newsletter signup in Google Analytics
         if (typeof window !== "undefined" && (window as any).gtag) {
           (window as any).gtag("event", "newsletter_signup", {
             event_category: "engagement",
@@ -85,6 +83,14 @@ export default function Home() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
+            {/* Launch Pricing Badge */}
+            <div className="inline-flex items-center px-4 py-2 mb-6 bg-amber-50 border-2 border-amber-400 rounded-full text-sm font-semibold text-amber-900 shadow-sm">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Limited-Time Launch Pricing: 50% off your first year • Ends March 15, 2026
+            </div>
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight mb-6">
               Monitor Your Practice&apos;s
               <span className="block text-blue-600">Online Reputation</span>
@@ -188,8 +194,7 @@ export default function Home() {
               Everything you need to manage your online reputation
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Powerful features to help you stay on top of what patients are
-              saying
+              Powerful features to help you stay on top of what patients are saying
             </p>
           </div>
 
@@ -221,9 +226,7 @@ export default function Home() {
                 Real-Time Monitoring
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Track Google reviews in real-time as they come in. Get
-                instant notifications when new reviews are posted so you can
-                respond quickly.
+                Track Google reviews in real-time as they come in. Get instant notifications when new reviews are posted so you can respond quickly.
               </p>
             </div>
 
@@ -248,9 +251,7 @@ export default function Home() {
                 AI Insights
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Get actionable recommendations powered by GPT-4. Understand
-                sentiment trends, identify issues early, and receive suggested
-                responses.
+                Get actionable recommendations powered by GPT-4. Understand sentiment trends, identify issues early, and receive suggested responses.
               </p>
             </div>
 
@@ -275,8 +276,7 @@ export default function Home() {
                 Competitor Analysis
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                See how you stack up against competitors in your area. Benchmark
-                your performance and discover opportunities to improve.
+                See how you stack up against competitors in your area. Benchmark your performance and discover opportunities to improve.
               </p>
             </div>
           </div>
@@ -298,20 +298,35 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Starter Plan */}
             <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200 relative hover:border-blue-300 transition-colors">
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              {/* Launch Pricing Badge */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <span className="inline-flex items-center px-4 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 border border-blue-200">
+                  LAUNCH<br />PRICING
+                </span>
+              </div>
+              
+              <div className="mb-8 mt-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Starter
                 </h3>
-                <div className="flex items-baseline mb-4">
-                  <span className="text-5xl font-extrabold text-gray-900">
-                    $79
+                <div className="flex items-baseline mb-2">
+                  <span className="text-5xl font-extrabold text-blue-600">
+                    $39
                   </span>
                   <span className="text-gray-600 ml-2">/month</span>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-sm text-gray-500 mb-1">for first year</p>
+                <p className="text-sm text-gray-500 mb-3">
+                  Then <span className="line-through">$79/month</span>
+                </p>
+                <div className="inline-block px-3 py-1 bg-green-50 text-green-700 text-sm font-medium rounded-md border border-green-200">
+                  Save $480 in year one
+                </div>
+                <p className="text-gray-600 mt-4">
                   Perfect for single or small practices
                 </p>
               </div>
+              
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <svg
@@ -343,9 +358,7 @@ export default function Home() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-gray-700">
-                    Real-time review monitoring
-                  </span>
+                  <span className="text-gray-700">Real-time review monitoring</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -377,11 +390,10 @@ export default function Home() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-gray-700">
-                    Basic analytics dashboard
-                  </span>
+                  <span className="text-gray-700">Basic analytics dashboard</span>
                 </li>
               </ul>
+              
               <a
                 href="https://app.practisight.com/signup"
                 className="block w-full py-3 px-6 text-center rounded-lg font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 transition-colors"
@@ -401,25 +413,38 @@ export default function Home() {
 
             {/* Professional Plan */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-600 relative hover:shadow-2xl transition-shadow">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <span className="inline-flex items-center px-4 py-1 rounded-full text-sm font-medium bg-blue-600 text-white">
-                  Most Popular
+              {/* Most Popular + Launch Pricing Badges */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-2">
+                <span className="inline-flex items-center px-4 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white">
+                  MOST POPULAR
+                </span>
+                <span className="inline-flex items-center px-4 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 border border-blue-200">
+                  LAUNCH<br />PRICING
                 </span>
               </div>
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              
+              <div className="mb-8 mt-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Professional
                 </h3>
-                <div className="flex items-baseline mb-4">
-                  <span className="text-5xl font-extrabold text-gray-900">
-                    $179
+                <div className="flex items-baseline mb-2">
+                  <span className="text-5xl font-extrabold text-blue-600">
+                    $89
                   </span>
                   <span className="text-gray-600 ml-2">/month</span>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-sm text-gray-500 mb-1">for first year</p>
+                <p className="text-sm text-gray-500 mb-3">
+                  Then <span className="line-through">$179/month</span>
+                </p>
+                <div className="inline-block px-3 py-1 bg-green-50 text-green-700 text-sm font-medium rounded-md border border-green-200">
+                  Save $1,080 in year one
+                </div>
+                <p className="text-gray-600 mt-4">
                   For growing practices with multiple locations
                 </p>
               </div>
+              
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <svg
@@ -503,9 +528,7 @@ export default function Home() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-gray-700">
-                    Advanced analytics & reporting
-                  </span>
+                  <span className="text-gray-700">Advanced analytics & reporting</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -524,6 +547,7 @@ export default function Home() {
                   <span className="text-gray-700">Priority support</span>
                 </li>
               </ul>
+              
               <a
                 href="https://app.practisight.com/signup"
                 className="block w-full py-3 px-6 text-center rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors"
@@ -540,6 +564,13 @@ export default function Home() {
                 Get Started
               </a>
             </div>
+          </div>
+
+          {/* Pricing Footer Note */}
+          <div className="mt-12 text-center">
+            <p className="text-sm text-gray-600">
+              Launch pricing automatically applied • Offer valid through March 15, 2026
+            </p>
           </div>
         </div>
       </section>
@@ -598,7 +629,20 @@ export default function Home() {
               </div>
             </details>
 
-            {/* Question 4 */}
+            {/* Question 4 - NEW */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200">
+              <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+                What happens after the promotional pricing ends?
+                <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600">
+                After your first 12 months at the launch price, your subscription automatically renews at the standard rate ($79 or $179/month depending on your plan). You can cancel anytime with 30 days notice. No long-term contracts required.
+              </div>
+            </details>
+
+            {/* Question 5 */}
             <details className="group bg-white rounded-lg shadow-sm border border-gray-200">
               <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-blue-600 transition-colors">
                 Do you offer discounts for multiple locations?
@@ -607,11 +651,11 @@ export default function Home() {
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-gray-600">
-                Our Professional plan ($179/month) includes up to 10 locations at a great value - that&apos;s less than $18 per location. For practices with more than 10 locations, contact us at support@practisight.com for custom enterprise pricing.
+                Our Professional plan ($89/month during launch pricing, regularly $179/month) includes up to 10 locations at a great value. For practices with more than 10 locations, contact us at support@practisight.com for custom enterprise pricing.
               </div>
             </details>
 
-            {/* Question 5 */}
+            {/* Question 6 */}
             <details className="group bg-white rounded-lg shadow-sm border border-gray-200">
               <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900 hover:text-blue-600 transition-colors">
                 Is my practice data secure?
@@ -649,8 +693,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Stay Updated</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Get the latest updates, tips, and best practices for managing your
-            online reputation.
+            Get the latest updates, tips, and best practices for managing your online reputation.
           </p>
 
           <form onSubmit={handleWaitlistSubmit} className="max-w-md mx-auto">
@@ -726,3 +769,4 @@ export default function Home() {
     </div>
   );
 }
+
