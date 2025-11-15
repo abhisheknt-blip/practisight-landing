@@ -673,10 +673,10 @@ export default function Home() {
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-6">Still have questions?</p>
             <a
-              href="https://app.practisight.com/support"
+              href="/contact"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Contact Support
+              Contact Us
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -757,10 +757,10 @@ export default function Home() {
                 Terms of Service
               </a>
               <a
-                href="https://app.practisight.com/support"
+                href="/contact"
                 className="hover:text-white transition-colors"
               >
-                Support
+                Contact Us
               </a>
             </div>
           </div>
