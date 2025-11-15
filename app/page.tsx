@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Logo } from "@/components/logo";
 import { supabase } from "./lib/supabase";
+import MobileMenu from './components/MobileMenu';
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -52,34 +53,31 @@ export default function Home() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Logo size="sm" />
-            <div className="flex items-center space-x-6">
-              <a
-                href="/contact"
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
-              >
-                Contact
-              </a>
-              <a
-                href="https://app.practisight.com/login"
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Sign In
-              </a>
-              <a
-                href="https://app.practisight.com/signup"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag) {
-                    (window as any).gtag('event', 'start_trial_click', {
-                      event_category: 'engagement',
-                      event_label: 'header_navigation',
-                      value: 1
-                    });
-                  }
-                }}
-              >
-                Start Free Trial
-              </a>
+            <div className="flex items-center">
+              {/* Desktop Navigation - hidden on mobile */}
+              <div className="hidden md:flex items-center space-x-6">
+                <a
+                  href="/contact"
+                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                >
+                  Contact
+                </a>
+                <a
+                  href="https://app.practisight.com/login"
+                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  Sign In
+                </a>
+                <a
+                  href="https://app.practisight.com/signup"
+                  className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                >
+                  Start Free Trial
+                </a>
+              </div>
+
+              {/* Mobile Menu - shown only on mobile */}
+              <MobileMenu />
             </div>
           </div>
         </nav>
@@ -166,7 +164,7 @@ export default function Home() {
             <div className="mt-16 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-3xl opacity-20"></div>
               <div className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto border border-gray-200">
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200">
                     <div className="text-3xl font-bold text-green-600 mb-1">
                       4.8
@@ -420,7 +418,7 @@ export default function Home() {
             {/* Professional Plan */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-600 relative hover:shadow-2xl transition-shadow">
               {/* Most Popular + Launch Pricing Badges */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-2">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row gap-2">
                 <span className="inline-flex items-center px-4 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white">
                   MOST POPULAR
                 </span>
