@@ -90,7 +90,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Have questions about PractiSight? We're here to help your practice succeed.
+            Have questions about PractiSight? We&apos;re here to help your practice succeed.
           </p>
         </div>
       </div>
@@ -107,7 +107,7 @@ export default function ContactPage() {
                 <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-semibold text-green-900">Message sent successfully!</h3>
-                  <p className="text-sm text-green-700">We'll get back to you within 24 hours.</p>
+                  <p className="text-sm text-green-700">We&apos;ll get back to you within 24 hours.</p>
                 </div>
               </div>
             )}
@@ -257,7 +257,7 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">We'll respond within 24 hours</p>
+                    <p className="text-gray-600">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
 
