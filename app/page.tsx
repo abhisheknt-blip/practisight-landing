@@ -52,7 +52,13 @@ export default function Home() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Logo size="sm" />
-            <div className="flex items-center gap-4">
+            <div className="flex items-center space-x-6">
+              <a
+                href="/contact"
+                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+              >
+                Contact
+              </a>
               <a
                 href="https://app.practisight.com/login"
                 className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
