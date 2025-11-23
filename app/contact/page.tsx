@@ -68,13 +68,25 @@ export default function ContactPage() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900">PractiSight</span>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="flex items-center justify-center bg-blue-600 w-10 h-10 rounded-lg">
+              <svg
+                className="text-white"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+              >
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
             </div>
+            <span className="text-2xl font-bold">
+              <span className="text-gray-900">Practi</span>
+              <span className="text-blue-600">Sight</span>
+            </span>
           </Link>
           <Link
             href="/"
@@ -288,8 +300,8 @@ export default function ContactPage() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/" className="text-blue-600 hover:text-blue-700 transition-colors">
-                    → View Pricing Plans
+                  <Link href="/#pricing" className="text-blue-600 hover:text-blue-700 transition-colors">
+                    → View Pricing
                   </Link>
                 </li>
                 <li>
