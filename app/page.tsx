@@ -164,8 +164,8 @@ export default function Home() {
 
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 PractiSight shows you exactly what your patients see — your
-                reviews, your competitors' reviews, and exactly what to fix to
-                win more new patients.
+                reviews, your competitors&apos; reviews, and exactly what to fix
+                to win more new patients.
               </p>
 
               {/* Key Stats */}
