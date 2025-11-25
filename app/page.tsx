@@ -158,13 +158,14 @@ export default function Home() {
             {/* Left Column: Copy */}
             <div>
               <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-                Turn Every Google Review Into Revenue
+                Your Next Patient Is Reading Your Reviews Right Now.{" "}
+                <span className="text-blue-600">What Are They Seeing?</span>
               </h1>
 
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                AI analyzes what patients say about you and your
-                competitors—then tells you exactly what to fix to win more
-                patients.
+                PractiSight shows you exactly what your patients see — your
+                reviews, your competitors' reviews, and exactly what to fix to
+                win more new patients.
               </p>
 
               {/* Key Stats */}
@@ -202,6 +203,22 @@ export default function Home() {
 
               {/* Trust Signals */}
               <div className="flex items-center gap-4 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <svg
+                    className="w-5 h-5 text-green-600 mr-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Built for dental practices
+                </div>
                 <div className="flex items-center">
                   <svg
                     className="w-5 h-5 text-green-600 mr-1"
@@ -684,45 +701,70 @@ export default function Home() {
                   Competitor Comparison
                 </h4>
 
-            {/* Rating Comparison */}
-            <div className="mb-6">
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Rating Comparison</h4>
-              <p className="text-sm text-gray-600 mb-4">Compare ratings across all practices</p>
-              <div className="space-y-3">
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm font-medium text-gray-900">Your Practice</span>
-                    <span className="text-sm font-bold text-blue-600">4.8★</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div className="bg-blue-600 h-3 rounded-full" style={{width: '96%'}}></div>
+                {/* Rating Comparison */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    Rating Comparison
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Compare ratings across all practices
+                  </p>
+                  <div className="space-y-3">
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-900">
+                          Your Practice
+                        </span>
+                        <span className="text-sm font-bold text-blue-600">
+                          4.8★
+                        </span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-3">
+                        <div
+                          className="bg-blue-600 h-3 rounded-full"
+                          style={{ width: "96%" }}
+                        ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-sm text-gray-700">
+                          Smile Dental Center
+                        </span>
+                        <span className="text-sm text-gray-600">4.5★</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-3">
+                        <div
+                          className="bg-gray-400 h-3 rounded-full"
+                          style={{ width: "90%" }}
+                        ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-sm text-gray-700">
+                          Family Dentistry Plus
+                        </span>
+                        <span className="text-sm text-gray-600">4.3★</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-3">
+                        <div
+                          className="bg-gray-400 h-3 rounded-full"
+                          style={{ width: "86%" }}
+                        ></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm text-gray-700">Smile Dental Center</span>
-                    <span className="text-sm text-gray-600">4.5★</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div className="bg-gray-400 h-3 rounded-full" style={{width: '90%'}}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm text-gray-700">Family Dentistry Plus</span>
-                    <span className="text-sm text-gray-600">4.3★</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div className="bg-gray-400 h-3 rounded-full" style={{width: '86%'}}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
                 {/* Review Volume Chart */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Review Volume Comparison</h4>
-                  <p className="text-sm text-gray-600 mb-4">Total number of reviews per practice</p>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    Review Volume Comparison
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Total number of reviews per practice
+                  </p>
                   <div className="flex items-end justify-around h-40 bg-gray-50 rounded-lg p-4">
                     <div className="flex flex-col items-center">
                       <div
@@ -891,7 +933,6 @@ export default function Home() {
             </div>
           </div>
 
-         
           {/* Feature 3: Smart Analytics */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -903,22 +944,58 @@ export default function Home() {
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
-                  <span className="text-gray-700"><strong>Analyze sentiment trends</strong> over time</span>
+                  <span className="text-gray-700">
+                    <strong>Analyze sentiment trends</strong> over time
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
-                  <span className="text-gray-700"><strong>Spot emerging issues</strong> before they escalate</span>
+                  <span className="text-gray-700">
+                    <strong>Spot emerging issues</strong> before they escalate
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
-                  <span className="text-gray-700"><strong>Identify your strengths</strong> to double down on</span>
+                  <span className="text-gray-700">
+                    <strong>Identify your strengths</strong> to double down on
+                  </span>
                 </li>
               </ul>
             </div>
@@ -926,17 +1003,39 @@ export default function Home() {
               {/* Top Positives & Staff Performance */}
               <div className="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 border border-green-100 mb-4">
                 <div className="flex items-center mb-4">
-                  <svg className="w-8 h-8 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                  <svg
+                    className="w-8 h-8 text-green-600 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+                    ></path>
                   </svg>
-                  <h4 className="text-lg font-bold text-gray-900">Top Positives</h4>
+                  <h4 className="text-lg font-bold text-gray-900">
+                    Top Positives
+                  </h4>
                 </div>
                 <div className="space-y-3">
                   <div className="bg-white rounded-lg p-4 border-l-4 border-green-500 shadow-sm">
                     <div className="font-semibold text-gray-900 mb-1 flex items-center">
                       Friendly and compassionate staff
-                      <svg className="w-4 h-4 text-green-600 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                      <svg
+                        className="w-4 h-4 text-green-600 ml-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                        ></path>
                       </svg>
                     </div>
                     <p className="text-sm text-gray-600">23 mentions</p>
@@ -944,52 +1043,106 @@ export default function Home() {
                   <div className="bg-white rounded-lg p-4 border-l-4 border-green-400 shadow-sm">
                     <div className="font-semibold text-gray-900 mb-1 flex items-center">
                       Quality of dental care
-                      <svg className="w-4 h-4 text-green-600 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                      <svg
+                        className="w-4 h-4 text-green-600 ml-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                        ></path>
                       </svg>
                     </div>
                     <p className="text-sm text-gray-600">18 mentions</p>
                   </div>
                 </div>
-                
+
                 {/* Staff Performance */}
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="flex items-center mb-3">
-                    <svg className="w-8 h-8 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    <svg
+                      className="w-8 h-8 text-blue-600 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      ></path>
                     </svg>
-                    <h4 className="text-lg font-bold text-gray-900">Staff Performance</h4>
+                    <h4 className="text-lg font-bold text-gray-900">
+                      Staff Performance
+                    </h4>
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm">
-                      <span className="font-medium text-gray-900">Dr. Sarah Johnson</span>
-                      <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">15 positive</span>
+                      <span className="font-medium text-gray-900">
+                        Dr. Sarah Johnson
+                      </span>
+                      <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
+                        15 positive
+                      </span>
                     </div>
                     <div className="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm">
-                      <span className="font-medium text-gray-900">Dr. Michael Chen</span>
-                      <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">12 positive</span>
+                      <span className="font-medium text-gray-900">
+                        Dr. Michael Chen
+                      </span>
+                      <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
+                        12 positive
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               {/* Top Issues */}
               <div className="bg-gradient-to-br from-red-50 to-white rounded-xl p-6 border border-red-100">
                 <div className="flex items-center mb-4">
-                  <svg className="w-8 h-8 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                  <svg
+                    className="w-8 h-8 text-red-600 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                    ></path>
                   </svg>
-                  <h4 className="text-lg font-bold text-gray-900">Top Issues</h4>
+                  <h4 className="text-lg font-bold text-gray-900">
+                    Top Issues
+                  </h4>
                 </div>
                 <div className="space-y-3">
                   <div className="bg-white rounded-lg p-4 border-l-4 border-red-500 shadow-sm">
                     <div className="font-semibold text-gray-900 mb-1 flex items-center">
                       Long wait times
-                      <svg className="w-4 h-4 text-red-600 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+                      <svg
+                        className="w-4 h-4 text-red-600 ml-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"
+                        ></path>
                       </svg>
                     </div>
-                    <p className="text-sm text-gray-600">7 mentions in negative reviews</p>
+                    <p className="text-sm text-gray-600">
+                      7 mentions in negative reviews
+                    </p>
                   </div>
                 </div>
               </div>
