@@ -8,7 +8,7 @@ const views = [
 ];
 
 /* ───── tiny shared helpers ───── */
-const Sidebar = ({ active }) => {
+const Sidebar = ({ active }: { active: string }) => {
   const items = [
     { icon: "📊", label: "Dashboard" },
     { icon: "📝", label: "Reviews" },
@@ -34,7 +34,7 @@ const Sidebar = ({ active }) => {
   );
 };
 
-const MetricCard = ({ title, value, sub, color = "text-gray-900", icon }) => (
+const MetricCard = ({ title, value, sub, color = "text-gray-900", icon }: { title: string; value: string; sub?: string; color?: string; icon?: React.ReactNode }) => (
   <div className="bg-white rounded-lg border border-gray-100 p-3 flex-1 min-w-0">
     <div className="flex items-center justify-between mb-1">
       <span className="text-xs text-gray-500 truncate">{title}</span>
@@ -62,7 +62,7 @@ const DashboardView = () => {
       <div className="flex-1 p-4 overflow-hidden">
         <div className="mb-3">
           <h2 className="text-base font-bold text-gray-900">Good afternoon, Dr. Mitchell</h2>
-          <p className="text-xs text-gray-500">Here's your practice reputation overview</p>
+          <p className="text-xs text-gray-500">Here&apos;s your practice reputation overview</p>
         </div>
 
         {/* Metric Cards */}
@@ -313,7 +313,7 @@ const InsightsView = () => (
       {/* AI Summary */}
       <div className="bg-blue-50 border border-blue-100 rounded-lg p-3 mb-3">
         <div className="flex items-center gap-1.5 mb-1"><span>✨</span><span className="text-sm font-bold text-gray-900">AI Summary:</span></div>
-        <p className="text-xs text-gray-700 leading-relaxed">Riverside Family Dental has strong patient satisfaction driven by Dr. Mitchell's clinical expertise (mentioned in 68% of positive reviews) and compassionate staff. However, <span className="font-semibold text-red-600">wait times are an emerging concern</span> — mentioned negatively 7 times in the last month, up from 2 the previous month. Front desk interactions also show a slight downward trend. Addressing these two areas could improve your rating from 4.8 to an estimated 4.9.</p>
+        <p className="text-xs text-gray-700 leading-relaxed">Riverside Family Dental has strong patient satisfaction driven by Dr. Mitchell&apos;s clinical expertise (mentioned in 68% of positive reviews) and compassionate staff. However, <span className="font-semibold text-red-600">wait times are an emerging concern</span> — mentioned negatively 7 times in the last month, up from 2 the previous month. Front desk interactions also show a slight downward trend. Addressing these two areas could improve your rating from 4.8 to an estimated 4.9.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
@@ -471,7 +471,7 @@ export default function ProductWalkthrough() {
     return () => clearInterval(tick);
   }, [paused, active]);
 
-  const handleTabClick = (i) => {
+  const handleTabClick = (i: number) => {
     setActive(i);
     setProgress(0);
     setPaused(false);
