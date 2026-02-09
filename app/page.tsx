@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./components/MobileMenu";
+import ProductWalkthrough from "./components/ProductWalkthrough";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -193,12 +194,12 @@ export default function Home() {
                 >
                   Start 14-Day Free Trial
                 </a>
-                <Link
-                  href="/contact"
+                <a
+                  href="#demo"
                   className="px-8 py-4 bg-white text-blue-600 border-2 border-gray-300 text-lg font-semibold rounded-lg hover:border-blue-600 text-center"
                 >
-                  Schedule Demo
-                </Link>
+                  Watch 60-Second Demo
+                </a>
               </div>
 
               {/* Trust Signals */}
@@ -546,6 +547,16 @@ export default function Home() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      <section id="demo" className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">See PractiSight in Action</h2>
+            <p className="text-xl text-gray-600">Auto-playing walkthrough — hover to pause and explore</p>
+          </div>
+          <ProductWalkthrough />
         </div>
       </section>
 
