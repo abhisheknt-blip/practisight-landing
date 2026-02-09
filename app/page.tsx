@@ -158,22 +158,20 @@ export default function Home() {
             {/* Left Column: Copy */}
             <div>
               <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-                Your Next Patient Is Reading Your Reviews Right Now.{" "}
-                <span className="text-blue-600">What Are They Seeing?</span>
+                Is Your Reputation{" "}
+                <span className="text-blue-600">Costing You Patients?</span>
               </h1>
 
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                PractiSight shows you exactly what your patients see — your
-                reviews, your competitors&apos; reviews, and exactly what to fix
-                to win more new patients.
+                PractiSight tracks your reviews, monitors your competitors, and shows you exactly what to fix — so the next patient picks you, not the practice down the street.
               </p>
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-blue-600">16.4%</div>
+                  <div className="text-3xl font-bold text-blue-600">$49/mo</div>
                   <div className="text-sm text-gray-700">
-                    Conversion improvements when you respond to reviews
+                    Costs less than one hygiene appointment. One new patient pays for the entire year.
                   </div>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
@@ -191,14 +189,14 @@ export default function Home() {
                   onClick={() => trackConversion("hero_primary_cta")}
                   className="px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 shadow-lg text-center"
                 >
-                  Start 14-Day Free Trial
+                  See Your Practice vs. Competitors — Free
                 </a>
-                <Link
-                  href="/contact"
+                <a
+                  href="#demo"
                   className="px-8 py-4 bg-white text-blue-600 border-2 border-gray-300 text-lg font-semibold rounded-lg hover:border-blue-600 text-center"
                 >
-                  Schedule Demo
-                </Link>
+                  Watch 60-Second Demo
+                </a>
               </div>
 
               {/* Trust Signals */}
@@ -344,207 +342,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Comparison Table: Why Not Google Alerts */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
+      {/* What PractiSight Finds Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">
-              Patients Review You. We Tell You What It Means.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              What PractiSight Finds in Your First Week
             </h2>
-            <p className="text-lg text-gray-600">See the difference</p>
+            <p className="text-xl text-gray-600">
+              Real insights from real review data
+            </p>
           </div>
 
-          <div className="overflow-hidden rounded-xl shadow-lg border border-gray-200">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-gray-50">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700"></th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-500">
-                    Google Alerts
-                  </th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-blue-600 bg-blue-50">
-                    PractiSight
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                    Review notifications
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg
-                      className="w-5 h-5 text-green-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center bg-blue-50">
-                    <svg
-                      className="w-5 h-5 text-green-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                    AI sentiment analysis
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg
-                      className="w-5 h-5 text-red-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center bg-blue-50">
-                    <svg
-                      className="w-5 h-5 text-green-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                    Actionable recommendations
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg
-                      className="w-5 h-5 text-red-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center bg-blue-50">
-                    <svg
-                      className="w-5 h-5 text-green-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                    Competitor tracking
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg
-                      className="w-5 h-5 text-red-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center bg-blue-50">
-                    <svg
-                      className="w-5 h-5 text-green-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                    Multi-location dashboard
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <svg
-                      className="w-5 h-5 text-red-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </td>
-                  <td className="px-6 py-4 text-center bg-blue-50">
-                    <svg
-                      className="w-5 h-5 text-green-500 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+              <div className="border-l-4 border-red-500 p-6">
+                <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  Your front desk is your #1 blind spot
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  PractiSight&apos;s AI analyzed reviews and found &quot;rude receptionist&quot; mentioned 23 times across competing practices. One fixed it and jumped from 4.2 to 4.6 stars in 3 months.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+              <div className="border-l-4 border-amber-500 p-6">
+                <div className="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  You respond in 5 days. They respond in 2 hours.
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Response time directly impacts patient choice. PractiSight alerts you the minute a review drops — so you never lose a patient to slow follow-up.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+              <div className="border-l-4 border-green-500 p-6">
+                <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  Great care. Bad wait times.
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Your 4.8★ clinical rating is the best locally. But &quot;long waits&quot; appears 7x in your last 20 reviews. Fix this one thing and you dominate your market.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -564,19 +424,19 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Feature 1: AI Insights - Image Right */}
+          {/* Feature 1: Competitor X-Ray - Text Left, Mockup Right */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <div className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-4">
-                AI-Powered Intelligence
+              <div className="inline-block px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm font-bold mb-4">
+                Competitor X-Ray
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Get Actionable Recommendations
+                See Everything Your Competitors Don&apos;t Want You to Know
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5"
+                    className="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-0.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -589,13 +449,12 @@ export default function Home() {
                     />
                   </svg>
                   <span className="text-gray-700">
-                    <strong>AI analyzes sentiment</strong> across all your
-                    reviews
+                    <strong>Compare ratings, volume, and response times</strong> side-by-side with up to 5 local competitors
                   </span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5"
+                    className="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-0.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -608,12 +467,12 @@ export default function Home() {
                     />
                   </svg>
                   <span className="text-gray-700">
-                    <strong>Identifies patterns</strong> and recurring themes
+                    <strong>Get alerted when a competitor&apos;s rating changes</strong> — before they pull ahead
                   </span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5"
+                    className="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-0.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -626,76 +485,12 @@ export default function Home() {
                     />
                   </svg>
                   <span className="text-gray-700">
-                    <strong>Prioritized by impact</strong> on patient
-                    satisfaction
+                    <strong>Spot their weaknesses</strong> and capitalize before they fix them
                   </span>
                 </li>
               </ul>
             </div>
             <div className="bg-white rounded-2xl shadow-2xl p-6">
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 border border-blue-100">
-                <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900">
-                    AI Recommendations
-                  </h4>
-                </div>
-                <div className="space-y-4">
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-blue-600 shadow-sm">
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 font-bold">
-                        1
-                      </div>
-                      <p className="text-gray-800">
-                        Improve appointment management to ensure that patients
-                        receive the care they need in a timely manner.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-blue-500 shadow-sm">
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 font-bold">
-                        2
-                      </div>
-                      <p className="text-gray-800">
-                        Train staff to avoid pushy sales tactics and focus on
-                        patient comfort and needs.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-blue-400 shadow-sm">
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-blue-400 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 font-bold">
-                        3
-                      </div>
-                      <p className="text-gray-800">
-                        Implement a consistent staff training program to reduce
-                        turnover and maintain a welcoming environment.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Feature 2: Competitor Tracking - Image Left */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            <div className="order-2 md:order-1 bg-white rounded-2xl shadow-2xl p-6">
               <div className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 border border-purple-100">
                 <h4 className="text-lg font-bold text-gray-900 mb-4">
                   Competitor Comparison
@@ -866,140 +661,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="order-1 md:order-2">
-              <div className="inline-block px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-bold mb-4">
-                Competitive Intelligence
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                See How You Stack Up
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-purple-600 mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-gray-700">
-                    <strong>Track up to 5 competitors</strong> automatically
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-purple-600 mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-gray-700">
-                    <strong>Side-by-side comparisons</strong> of ratings and
-                    volume
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-purple-600 mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-gray-700">
-                    <strong>Market position insights</strong> in your area
-                  </span>
-                </li>
-              </ul>
-            </div>
           </div>
 
-          {/* Feature 3: Smart Analytics */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-bold mb-4">
-                Smart Analytics
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Know What Patients Really Think
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-gray-700">
-                    <strong>Analyze sentiment trends</strong> over time
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-gray-700">
-                    <strong>Spot emerging issues</strong> before they escalate
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-gray-700">
-                    <strong>Identify your strengths</strong> to double down on
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-2xl shadow-2xl p-6">
+          {/* Feature 2: Smart Analytics - Mockup Left, Text Right */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="order-2 md:order-1 bg-white rounded-2xl shadow-2xl p-6">
               {/* Top Positives & Staff Performance */}
               <div className="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 border border-green-100 mb-4">
                 <div className="flex items-center mb-4">
@@ -1147,6 +813,233 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="order-1 md:order-2">
+              <div className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-bold mb-4">
+                Smart Analytics
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Know Why Patients Leave Before They Do
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-gray-700">
+                    <strong>AI reads every review</strong> and surfaces the patterns you&apos;d miss manually
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-gray-700">
+                    <strong>&quot;Long wait times&quot; mentioned 7 times this month?</strong> You&apos;ll know on day one
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-gray-700">
+                    <strong>Track which staff members patients love</strong> — and which ones cost you ratings
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Feature 3: AI-Powered Intelligence - Text Left, Mockup Right */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-4">
+                AI-Powered Intelligence
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Stop Guessing. Get a Fix-It List.
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-gray-700">
+                    <strong>Prioritized actions</strong> based on what&apos;s actually hurting your ratings
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-gray-700">
+                    <strong>Specific to your reviews and your market</strong> — not generic advice
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-gray-700">
+                    <strong>Like having a $200/hr practice consultant</strong> for $49/mo
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl shadow-2xl p-6">
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 border border-blue-100">
+                <div className="flex items-center mb-6">
+                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900">
+                    AI Recommendations
+                  </h4>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4 border-l-4 border-blue-600 shadow-sm">
+                    <div className="flex items-start">
+                      <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 font-bold">
+                        1
+                      </div>
+                      <p className="text-gray-800">
+                        Improve appointment management to ensure that patients
+                        receive the care they need in a timely manner.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 border-l-4 border-blue-500 shadow-sm">
+                    <div className="flex items-start">
+                      <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 font-bold">
+                        2
+                      </div>
+                      <p className="text-gray-800">
+                        Train staff to avoid pushy sales tactics and focus on
+                        patient comfort and needs.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 border-l-4 border-blue-400 shadow-sm">
+                    <div className="flex items-start">
+                      <div className="w-8 h-8 bg-blue-400 text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 font-bold">
+                        3
+                      </div>
+                      <p className="text-gray-800">
+                        Implement a consistent staff training program to reduce
+                        turnover and maintain a welcoming environment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-5 gap-10 items-center">
+            {/* Photo - 2 columns */}
+            <div className="md:col-span-2 flex justify-center">
+              <div className="w-48 h-48 rounded-full bg-blue-100 flex items-center justify-center shadow-lg">
+                <span className="text-5xl font-bold text-blue-600">AT</span>
+              </div>
+              {/* TODO: Replace the div above with an actual image tag once headshot is uploaded:
+              <img src="/abhi-headshot.jpg" alt="Abhi Tiwari, founder of PractiSight" className="w-48 h-48 rounded-full object-cover shadow-lg" />
+              */}
+            </div>
+
+            {/* Bio - 3 columns */}
+            <div className="md:col-span-3">
+              <div className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-4">
+                Why I Built This
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Hi, I&apos;m Abhi
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                I built PractiSight after watching independent dental practices lose patients to competitors who simply managed their online reputation better — not because they were better dentists. I wanted to level that playing field.
+              </p>
+              <div className="flex items-center text-gray-600">
+                <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                <span className="text-sm">Built with enterprise-grade security — your practice data stays yours.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1161,6 +1054,9 @@ export default function Home() {
             <p className="text-xl text-gray-600">
               Everything you need to win more patients
             </p>
+            <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-8">
+              The average dental patient is worth $1,500+ over their lifetime. PractiSight helps you keep the ones you&apos;re losing — for less than the cost of one hygiene appointment.
+            </p>
           </div>
 
           <div className="rounded-2xl border-2 border-blue-600 overflow-hidden shadow-xl max-w-lg mx-auto">
@@ -1170,7 +1066,7 @@ export default function Home() {
                 Limited Time: 50% Off First Year
               </div>
 
-              <h3 className="text-3xl font-bold mb-6">Standard Plan</h3>
+              <h3 className="text-3xl font-bold mb-6">Growth Plan</h3>
 
               <div className="mb-4">
                 <span className="text-6xl font-extrabold">$49</span>
@@ -1319,8 +1215,7 @@ export default function Home() {
           <div className="text-center mt-8 text-sm text-gray-600 max-w-2xl mx-auto">
             <p>
               <strong>Launch pricing:</strong> $49/month for your first 12
-              months. Standard rate of $99/month applies after. Offer ends March
-              15, 2026 or after first 50 customers.
+              months. Standard rate of $99/month applies after. Limited to first 50 practices.
             </p>
           </div>
         </div>
@@ -1430,6 +1325,50 @@ export default function Home() {
                 until the end of your billing period. No questions asked.
               </div>
             </details>
+
+            <details className="group bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900">
+                How is this different from Birdeye or Podium?
+                <svg
+                  className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600">
+                Those platforms are all-in-one communication suites that cost $300+/month and take weeks to set up. PractiSight focuses on review intelligence and competitor tracking — the insights that actually win you patients. Setup takes 5 minutes, not 5 meetings.
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-gray-900">
+                I already respond to my reviews. Why do I need this?
+                <svg
+                  className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600">
+                Responding is table stakes. PractiSight tells you what your competitors&apos; reviews reveal about their weaknesses, what patterns in your reviews cost you patients, and exactly what to fix first. It&apos;s the difference between playing defense and playing offense.
+              </div>
+            </details>
           </div>
         </div>
       </section>
@@ -1438,11 +1377,10 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Win More Patients?
+            Your Competitors Won&apos;t Wait. Neither Should You.
           </h2>
           <p className="text-xl text-blue-50 mb-8">
-            See what your competitors are doing right—and what you can do
-            better.
+            See how your practice stacks up — free for 14 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -1450,7 +1388,7 @@ export default function Home() {
               onClick={() => trackConversion("final_cta_section")}
               className="px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-100 shadow-lg"
             >
-              Start Free Trial →
+              See Your Practice vs. Competitors — Free
             </a>
             <Link
               href="/contact"
@@ -1491,7 +1429,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-sm text-gray-400">
-                © 2025 PractiSight LLC. All rights reserved.
+                © 2026 PractiSight LLC. All rights reserved.
               </p>
             </div>
             <div className="flex space-x-8">
