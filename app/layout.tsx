@@ -1,10 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import CookieConsent from "./components/CookieConsent";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PractiSight - Monitor Your Practice's Online Reputation in Real-Time",
@@ -52,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
             <Script
