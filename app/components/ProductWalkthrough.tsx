@@ -10,7 +10,7 @@ const views = [
 ];
 
 /* ───── tiny shared helpers ───── */
-const Sidebar = ({ active }) => {
+const Sidebar = ({ active }: { active: string }) => {
   const items = [
     { icon: "📊", label: "Dashboard" },
     { icon: "📝", label: "Reviews" },
@@ -36,7 +36,7 @@ const Sidebar = ({ active }) => {
   );
 };
 
-const MetricCard = ({ title, value, sub, color = "text-gray-900", icon }) => (
+const MetricCard = ({ title, value, sub, color = "text-gray-900", icon }: { title: string; value: string; sub?: string; color?: string; icon?: string }) => (
   <div className="bg-white rounded-lg border border-gray-100 p-3 flex-1 min-w-0">
     <div className="flex items-center justify-between mb-1">
       <span className="text-xs text-gray-500 truncate">{title}</span>
@@ -473,7 +473,7 @@ export default function ProductWalkthrough() {
     return () => clearInterval(tick);
   }, [paused, active]);
 
-  const handleTabClick = (i) => {
+  const handleTabClick = (i: number) => {
     setActive(i);
     setProgress(0);
     setPaused(false);
