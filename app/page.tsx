@@ -197,7 +197,7 @@ export default function Home() {
                   href="#demo"
                   className="px-8 py-4 bg-white text-blue-600 border-2 border-gray-300 text-lg font-semibold rounded-lg hover:border-blue-600 text-center"
                 >
-                  Watch 60-Second Demo
+                  See How It Works
                 </a>
               </div>
 
@@ -394,7 +394,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">See PractiSight in Action</h2>
-            <p className="text-xl text-gray-600">Auto-playing walkthrough — hover to pause and explore</p>
+            <p className="text-xl text-gray-600">See what your dashboard looks like on day one</p>
           </div>
           <ProductWalkthrough />
         </div>
@@ -472,12 +472,6 @@ export default function Home() {
               <p className="text-gray-600 leading-relaxed mb-4">
                 I kept seeing great dentists lose patients to competitors with better online reputations — not better dentistry. Practices with worse care but more reviews and faster response times were winning. So I built PractiSight: the competitive intelligence tool that shows you exactly what&apos;s happening in your market and what to fix first. Think of it as your unfair advantage — for $49/mo.
               </p>
-              <div className="flex items-center text-gray-600">
-                <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-                <span className="text-sm">Your data is protected with bank-level 256-bit encryption. Security isn&apos;t an afterthought — it&apos;s my day job.</span>
-              </div>
             </div>
           </div>
         </div>
