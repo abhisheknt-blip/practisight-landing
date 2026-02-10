@@ -490,7 +490,7 @@ export default function Home() {
           </div>
 
           <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-8">
-            The average dental patient is worth $1,500+ over their lifetime. PractiSight helps you keep the ones you&apos;re losing — for less than the cost of one hygiene appointment.
+            The average dental patient is worth $5,000+ over their lifetime. PractiSight helps you keep the ones you&apos;re losing — for less than the cost of one hygiene appointment.
           </p>
 
           <div className="rounded-2xl border-2 border-blue-600 overflow-hidden shadow-xl max-w-lg mx-auto">
